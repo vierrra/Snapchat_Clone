@@ -167,16 +167,17 @@
                         <outlet property="confirmPasswordTextField" destination="nNP-wB-Vtw" id="wIe-vq-g9q"/>
                         <outlet property="emailTextField" destination="Rbn-YT-qlh" id="Bp0-m9-fmt"/>
                         <outlet property="passwordTextField" destination="jsT-Bc-FBa" id="lxG-kd-wLf"/>
+                        <segue destination="ib3-Th-rae" kind="presentation" identifier="accountCreateSegue" id="iCc-5t-8QP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ju-UG-k1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="768.75000000000011"/>
         </scene>
-        <!--To Enter-->
+        <!--Login-->
         <scene sceneID="Cyh-QY-2tM">
             <objects>
-                <viewController id="SoW-nO-96J" customClass="ToEnterViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SoW-nO-96J" customClass="LoginViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uaT-ao-D6y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,6 +211,9 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="SoW-nO-96J" eventType="touchUpInside" id="0oa-9W-UP7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aHg-SN-Eqg"/>
@@ -223,6 +227,8 @@
                             <constraint firstItem="aHg-SN-Eqg" firstAttribute="trailing" secondItem="lcA-ML-aJz" secondAttribute="trailing" constant="20" id="Ssc-0c-fEm"/>
                             <constraint firstItem="hno-kD-pYa" firstAttribute="top" secondItem="lcA-ML-aJz" secondAttribute="bottom" constant="47" id="UaZ-no-oDo"/>
                             <constraint firstItem="lcA-ML-aJz" firstAttribute="leading" secondItem="aHg-SN-Eqg" secondAttribute="leading" constant="20" id="ZZh-eH-9V9"/>
+                            <constraint firstItem="aHg-SN-Eqg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tDk-sZ-cs7" secondAttribute="trailing" symbolic="YES" id="eVI-T6-jvu"/>
+                            <constraint firstItem="aHg-SN-Eqg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XCh-9S-MQk" secondAttribute="trailing" symbolic="YES" id="lCz-Zu-AAf"/>
                             <constraint firstItem="lcA-ML-aJz" firstAttribute="top" secondItem="XCh-9S-MQk" secondAttribute="bottom" constant="8" symbolic="YES" id="lYQ-o1-rff"/>
                             <constraint firstItem="XCh-9S-MQk" firstAttribute="leading" secondItem="aHg-SN-Eqg" secondAttribute="leading" constant="20" id="mNR-F2-C10"/>
                             <constraint firstItem="tDk-sZ-cs7" firstAttribute="top" secondItem="aHg-SN-Eqg" secondAttribute="top" constant="8" id="pac-Qp-xRd"/>
@@ -230,11 +236,40 @@
                             <constraint firstItem="aHg-SN-Eqg" firstAttribute="trailing" secondItem="hno-kD-pYa" secondAttribute="trailing" constant="126" id="wMM-G6-LzV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="To Enter" id="XnI-54-vAE"/>
+                    <navigationItem key="navigationItem" title="Login" id="XnI-54-vAE"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="KME-RT-WJC" id="UyT-Zk-SRV"/>
+                        <outlet property="passwordTextField" destination="lcA-ML-aJz" id="Jsw-3p-tHC"/>
+                        <segue destination="ib3-Th-rae" kind="presentation" identifier="loginSegue" id="Mmw-2j-F4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jhb-fd-QOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="-479.34782608695656"/>
+            <point key="canvasLocation" x="2020" y="-605"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Qcr-Yn-Eoa">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ib3-Th-rae" customClass="MainViewController" customModule="SnapChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fAi-g0-Tec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQB-wX-RCc">
+                                <rect key="frame" x="165" y="336" width="84" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CVP-uj-Du7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7r-Lc-y16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L1c-i9-x2U">
@@ -255,11 +290,17 @@
             <point key="canvasLocation" x="-57.971014492753625" y="-7.3369565217391308"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iCc-5t-8QP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="200" height="200"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

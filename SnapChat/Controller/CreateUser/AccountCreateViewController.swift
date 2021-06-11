@@ -36,10 +36,15 @@ class AccountCreateViewController: UIViewController {
             
             createUser.createUser(withEmail: email, password: password, completion: {(user, error) in
                 if error == nil {
-                    Alert(controller: self).showAlertAction("Congratulations", "User registered with success.")
+                    //Alert(controller: self).showAlertAction("Congratulations", "User registered with success.")
+//                    let viewController = MainViewController()
+//                    self.presentFullScreen(viewController, animated: true)
+                    
+                    self.performSegue(withIdentifier: "accountCreateSegue", sender: nil)
+                    
                 } else {
                     let errorRecovery = error?.localizedDescription
-                    var errorMessage = ""
+                    var errorMessage  = ""
                     
                     switch errorRecovery {
                         case "The email address is badly formatted.":
@@ -51,8 +56,8 @@ class AccountCreateViewController: UIViewController {
                         case "The email address is already in use by another account.":
                             errorMessage = "This email is being used by another account."
                         
-                    default:
-                        Alert(controller: self).showAlertAction("Warning", "Data entered is incorrect.")
+                        default:
+                            Alert(controller: self).showAlertAction("Warning", "Data entered is incorrect.")
                     }
                     
                     Alert(controller: self).showAlertAction("Warning", errorMessage)

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A380A2041CE5DAE96F70A51 /* Pods_SnapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781FCF422B851F2B74C89803 /* Pods_SnapChat.framework */; };
+		884E471F2672FB4A00676D83 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E471E2672FB4A00676D83 /* MainViewController.swift */; };
+		884E47212673019600676D83 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884E47202673019600676D83 /* ExtensionUIViewController.swift */; };
 		88A0AFC42671A68800A367A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFC32671A68800A367A0 /* AppDelegate.swift */; };
 		88A0AFC62671A68800A367A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFC52671A68800A367A0 /* SceneDelegate.swift */; };
 		88A0AFC82671A68800A367A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFC72671A68800A367A0 /* HomeViewController.swift */; };
@@ -15,7 +17,7 @@
 		88A0AFCD2671A68B00A367A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A0AFCC2671A68B00A367A0 /* Assets.xcassets */; };
 		88A0AFD02671A68B00A367A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0AFCE2671A68B00A367A0 /* LaunchScreen.storyboard */; };
 		88A0AFD82671A7F100A367A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88A0AFD72671A7F100A367A0 /* GoogleService-Info.plist */; };
-		88A0AFDB2671B62700A367A0 /* ToEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFDA2671B62700A367A0 /* ToEnterViewController.swift */; };
+		88A0AFDB2671B62700A367A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFDA2671B62700A367A0 /* LoginViewController.swift */; };
 		88A0AFDD2671B65900A367A0 /* AccountCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFDC2671B65900A367A0 /* AccountCreateViewController.swift */; };
 		88A0AFE02671C68200A367A0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0AFDF2671C68200A367A0 /* Alert.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		604AB6F547CE4DF607D699ED /* Pods-SnapChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapChat.debug.xcconfig"; path = "Target Support Files/Pods-SnapChat/Pods-SnapChat.debug.xcconfig"; sourceTree = "<group>"; };
 		781FCF422B851F2B74C89803 /* Pods_SnapChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		884E471E2672FB4A00676D83 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		884E47202673019600676D83 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		88A0AFC02671A68800A367A0 /* SnapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A0AFC32671A68800A367A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A0AFC52671A68800A367A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +37,7 @@
 		88A0AFD12671A68B00A367A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A0AFD72671A7F100A367A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		88A0AFD92671A90B00A367A0 /* SnapChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnapChat.entitlements; sourceTree = "<group>"; };
-		88A0AFDA2671B62700A367A0 /* ToEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToEnterViewController.swift; sourceTree = "<group>"; };
+		88A0AFDA2671B62700A367A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88A0AFDC2671B65900A367A0 /* AccountCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreateViewController.swift; sourceTree = "<group>"; };
 		88A0AFDF2671C68200A367A0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBA3B57E9F0757247F3DD1C4 /* Pods-SnapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapChat.release.xcconfig"; path = "Target Support Files/Pods-SnapChat/Pods-SnapChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +64,55 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		884E47182672EC1F00676D83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		884E47192672EC2B00676D83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A0AFC92671A68800A367A0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		884E471A2672EC3200676D83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				884E471D2672FB3400676D83 /* Main */,
+				884E471C2672ECB400676D83 /* Login */,
+				884E471B2672EC6500676D83 /* CreateUser */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		884E471B2672EC6500676D83 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				88A0AFDC2671B65900A367A0 /* AccountCreateViewController.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		884E471C2672ECB400676D83 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88A0AFDA2671B62700A367A0 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		884E471D2672FB3400676D83 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				884E471E2672FB4A00676D83 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		88A0AFB72671A68800A367A0 = {
 			isa = PBXGroup;
 			children = (
@@ -81,18 +134,18 @@
 		88A0AFC22671A68800A367A0 /* SnapChat */ = {
 			isa = PBXGroup;
 			children = (
+				884E47182672EC1F00676D83 /* Model */,
+				884E47192672EC2B00676D83 /* View */,
+				884E471A2672EC3200676D83 /* Controller */,
 				88A0AFDE2671C67000A367A0 /* Common */,
 				88A0AFD92671A90B00A367A0 /* SnapChat.entitlements */,
 				88A0AFC32671A68800A367A0 /* AppDelegate.swift */,
 				88A0AFC52671A68800A367A0 /* SceneDelegate.swift */,
 				88A0AFC72671A68800A367A0 /* HomeViewController.swift */,
-				88A0AFC92671A68800A367A0 /* Main.storyboard */,
 				88A0AFCC2671A68B00A367A0 /* Assets.xcassets */,
 				88A0AFCE2671A68B00A367A0 /* LaunchScreen.storyboard */,
 				88A0AFD12671A68B00A367A0 /* Info.plist */,
 				88A0AFD72671A7F100A367A0 /* GoogleService-Info.plist */,
-				88A0AFDA2671B62700A367A0 /* ToEnterViewController.swift */,
-				88A0AFDC2671B65900A367A0 /* AccountCreateViewController.swift */,
 			);
 			path = SnapChat;
 			sourceTree = "<group>";
@@ -101,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				88A0AFDF2671C68200A367A0 /* Alert.swift */,
+				884E47202673019600676D83 /* ExtensionUIViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -228,11 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884E471F2672FB4A00676D83 /* MainViewController.swift in Sources */,
 				88A0AFE02671C68200A367A0 /* Alert.swift in Sources */,
 				88A0AFC82671A68800A367A0 /* HomeViewController.swift in Sources */,
 				88A0AFC42671A68800A367A0 /* AppDelegate.swift in Sources */,
+				884E47212673019600676D83 /* ExtensionUIViewController.swift in Sources */,
 				88A0AFDD2671B65900A367A0 /* AccountCreateViewController.swift in Sources */,
-				88A0AFDB2671B62700A367A0 /* ToEnterViewController.swift in Sources */,
+				88A0AFDB2671B62700A367A0 /* LoginViewController.swift in Sources */,
 				88A0AFC62671A68800A367A0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
