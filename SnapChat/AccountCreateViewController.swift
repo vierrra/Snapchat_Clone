@@ -14,7 +14,6 @@ class AccountCreateViewController: UIViewController {
     @IBOutlet weak var passwordTextField:        UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,15 +32,34 @@ class AccountCreateViewController: UIViewController {
         guard let email = emailTextField.text, let password = passwordTextField.text, let confirmPassword = confirmPasswordTextField.text else { return }
         
         if (password == confirmPassword) {
-            Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
+            let createUser = Auth.auth()
+            
+            createUser.createUser(withEmail: email, password: password, completion: {(user, error) in
                 if error == nil {
-                    Alert(controller: self).showAlertAction("Parabéns", "Usuário registrado com sucesso")
+                    Alert(controller: self).showAlertAction("Congratulations", "User registered with success.")
                 } else {
-                    Alert(controller: self).showAlertAction("Algo deu errado", "Não foi possível cadastrar usuário")
+                    let errorRecovery = error?.localizedDescription
+                    var errorMessage = ""
+                    
+                    switch errorRecovery {
+                        case "The email address is badly formatted.":
+                            errorMessage = "Invalid email, insert a valid email."
+                        
+                        case "The password must be 6 characters long or more.":
+                            errorMessage = "Password must be at least 6 characters."
+                        
+                        case "The email address is already in use by another account.":
+                            errorMessage = "This email is being used by another account."
+                        
+                    default:
+                        Alert(controller: self).showAlertAction("Warning", "Data entered is incorrect.")
+                    }
+                    
+                    Alert(controller: self).showAlertAction("Warning", errorMessage)
                 }
             })
         } else {
-            Alert(controller: self).showAlertAction("Aviso", "Senhas não coincidem")
+            Alert(controller: self).showAlertAction("Warning", "Passwords do not match.")
         }
     }
     
@@ -49,5 +67,9 @@ class AccountCreateViewController: UIViewController {
         self.emailTextField.keyboardType                = .emailAddress
         self.passwordTextField.isSecureTextEntry        = true
         self.confirmPasswordTextField.isSecureTextEntry = true
+    }
+    
+    func setButtonLayout() {
+        // to-do
     }
 }
