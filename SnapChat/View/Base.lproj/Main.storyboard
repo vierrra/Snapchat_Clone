@@ -302,14 +302,14 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53i-es-BMr">
                                 <rect key="frame" x="104" y="266" width="206" height="39"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <state key="normal" title="Próximo">
+                                <state key="normal" title="Enviar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="accountCreateButton:" destination="15C-p7-w8x" eventType="touchUpInside" id="sb3-xk-ze7"/>
-                                    <action selector="nextButtonAction:" destination="G2z-fN-lDP" eventType="touchUpInside" id="Jzs-Em-7eM"/>
+                                    <action selector="sendButtonAction:" destination="G2z-fN-lDP" eventType="touchUpInside" id="Jzs-Em-7eM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -391,6 +391,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -15,15 +15,16 @@ class CapturePhotoViewController: UIViewController {
     @IBOutlet weak var nextButton:                UIButton!
     
     var imagePicker = UIImagePickerController()
+    var idImage     = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePicker.delegate   = self
+        self.configureDisableSendButton()
     }
     
-    @IBAction func nextButtonAction(_ sender: Any) {
-        self.configureNextButton()
+    @IBAction func sendButtonAction(_ sender: Any) {
+        self.configureSendButton()
     }
     
     @IBAction func selectionPhotoAction(_ sender: Any) {
@@ -31,11 +32,21 @@ class CapturePhotoViewController: UIViewController {
         self.configureImagePicker()
     }
     
-    func configureNextButton() {
+    func configureSendButton() {
         self.nextButton.isEnabled = false
         self.nextButton.setTitle("Carregando...", for: .normal)
         
         self.uploadProfileImage()
+    }
+    
+    func configureDisableSendButton() {
+        self.nextButton.isEnabled = false
+        self.nextButton.backgroundColor = .lightGray
+    }
+    
+    func configureActiveSendButton() {
+        self.nextButton.isEnabled = true
+        self.nextButton.backgroundColor = .systemBlue
     }
     
     func uploadProfileImage() {
@@ -43,12 +54,12 @@ class CapturePhotoViewController: UIViewController {
         let images  = storage.child("images")
         
         if let selectedImage = photoImageView.image {
-            if let dataImage = selectedImage.jpegData(compressionQuality: 0.75) {
-                images.child("image.jpg").putData(dataImage, metadata: nil, completion: {(metaData, error) in
+            if let dataImage = selectedImage.jpegData(compressionQuality: 0.1) {
+                images.child("\(self.idImage).jpg").putData(dataImage, metadata: nil, completion: {(metaData, error) in
                     if error == nil {
                         print("Sucesso")
                         self.nextButton.isEnabled = true
-                        self.nextButton.setTitle("Próximo", for: .normal)
+                        self.nextButton.setTitle("Enviar", for: .normal)
                     } else {
                         print("Falha")
                     }
@@ -61,6 +72,7 @@ class CapturePhotoViewController: UIViewController {
 extension CapturePhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func configureImagePicker() {
+        imagePicker.delegate    = self
         imagePicker.sourceType = .photoLibrary
         
         self.presentFullScreen(imagePicker, animated: true)
@@ -72,5 +84,6 @@ extension CapturePhotoViewController: UIImagePickerControllerDelegate, UINavigat
         self.photoImageView.image = retrievedImage
         
         self.imagePicker.dismiss(animated: true, completion: nil)
+        self.configureActiveSendButton()
     }
 }
