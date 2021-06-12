@@ -49,13 +49,7 @@ class LoginViewController: UIViewController {
                 
                 Alert(controller: self).showAlertAction("Warning", message)
             } else {
-//                func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//                    if segue.identifier == "loginSegue" {
-//                        if let viewController = segue.destination as? LoginViewController {
-//                            self.present(viewController, animated: true, completion: nil)
-//                        }
-//                    }
-//                }
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         })
     }
